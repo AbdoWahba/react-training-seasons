@@ -26,7 +26,7 @@ class App extends React.Component {
       if (this.state.lat) {
         return <SeasonDisplay lat={this.state.lat} />;
       } else {
-        return <Spinner />;
+        return <Spinner msg="accept access ..." />;
       }
     } else {
       return (
