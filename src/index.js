@@ -20,8 +20,7 @@ class App extends React.Component {
       }
     );
   }
-  render() {
-    console.log(this.state);
+  renderItem() {
     if (!this.state.err) {
       if (this.state.lat) {
         return <SeasonDisplay lat={this.state.lat} />;
@@ -33,6 +32,9 @@ class App extends React.Component {
         <div style={{ backgroundColor: "pink" }}>err: {this.state.err}</div>
       );
     }
+  }
+  render() {
+    return <div style={{ border: "10px solid red" }}>{this.renderItem()}</div>;
   }
 }
 
